@@ -13,5 +13,6 @@ function lever() {
     document.getElementsByName("urls[GitHub]")[0].value = PROFILE.github;
     document.getElementsByName("urls[Portfolio]")[0].value = PROFILE.website;
     setTimeout(function() { completeNotification(); }, 800);
+
     // now submit resume
 }
