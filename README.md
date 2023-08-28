@@ -1,6 +1,3 @@
-### Source Code
-Written and compiled on Windows 10 Home Version 20H2 using VSCode. No external libraries used.
-
 ### Software needed to build production build
 1. Closure Compiler v20210106
 Available at: https://mvnrepository.com/artifact/com.google.javascript/closure-compiler 
