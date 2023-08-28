@@ -2,9 +2,9 @@
   "name": "job",
   "version": "0.5",
   "description": "Autofill job applications with one click",
-  "permissions": ["contextMenus", "tabs",  "notifications", "storage"],
+  "permissions": ["contextMenus", "tabs",  "notifications", "storage","scripting"],
   "background": {
-    "service_worker": ["background.js", "config.js"]
+    "service_worker": "background.js"
   },
   
   "content_scripts": [
@@ -16,13 +16,19 @@
     }
   ],
 
-  "content_security_policy": { 
-    "extension-pages": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
-    "sandbox": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+  "content_security_policy": {
+    "extension-pages": "script-src 'self'; object-src 'self'"
+
   },
 
-  "web_accessible_resources": ["popup.html", "index.html", "*.png", "Roboto-Regular.ttf"],
-  
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.html", "index.html", "*.png", "Roboto-Regular.ttf"],
+      "matches":  ["http://*/*","https://*/*"]
+    }
+
+
+  ],
   "manifest_version": 3,
   "icons": { 
     "16": "job16.png",

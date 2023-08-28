@@ -4,9 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     document.getElementById('autofill').onclick = function() {
       chrome.tabs.query({active: true, currentWindow: true},function(tabs) {
-        chrome.tabs.executeScript(tabs[0].id, {file: 'content.js'}, function() {
+        chrome.scripting.executeScript({
+          target : {tabId : tabs[0].id},
+          files : [ "content.js" ],
+        },function(){
           chrome.tabs.sendMessage(tabs[0].id, {message: "hello"});
-        });
+        })
     });
   }
     var y = document.getElementById("support_page");
