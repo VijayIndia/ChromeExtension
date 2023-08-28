@@ -1,5 +1,5 @@
 {
-  "name": "Kumquat",
+  "name": "job",
   "version": "0.5",
   "description": "Autofill job applications with one click",
   "permissions": ["contextMenus", "tabs",  "notifications", "storage"],
@@ -25,12 +25,12 @@
   
   "manifest_version": 3,
   "icons": { 
-    "16": "kumquat16.png",
-    "48": "kumquat48.png",
-    "128": "kumquat128.png"
+    "16": "job16.png",
+    "48": "job48.png",
+    "128": "job128.png"
   },
   "action": {
-      "default_icon": "kumquat16.png",
+      "default_icon": "job16.png",
       "default_popup": "popup.html"
   },
   "options_page": "index.html"

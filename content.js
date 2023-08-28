@@ -4,21 +4,21 @@ var taleoflag = false;
 
 function createPopup(system) {
   let overlayDiv = document.createElement('DIV');
-  overlayDiv.id = "kumquatOverlay";
+  overlayDiv.id = "jobOverlay";
   document.body.insertBefore(overlayDiv, document.body.firstChild);
-  let kumquatTree = document.createElement('IMG');
-  kumquatTree.id = "kumquatTree";
-  kumquatTree.src = chrome.extension.getURL("kumquat_tree.png");
+  let jobTree = document.createElement('IMG');
+  jobTree.id = "jobTree";
+  jobTree.src = chrome.extension.getURL("job_tree.png");
   let popupCTA = document.createElement('DIV');
   popupCTA.id = "popupText";
-  popupCTA.innerHTML = "Kumquat Compatible!"
+  popupCTA.innerHTML = "job Compatible!"
   let buttonText = document.createElement('BUTTON');
-  buttonText.id = "kumquatButton";
+  buttonText.id = "jobButton";
   buttonText.innerHTML = 'Autofill Application'
   let popupClose = document.createElement('DIV');
   popupClose.id = "popupClose";
   popupClose.innerHTML = "Try Later"
-  overlayDiv.appendChild(kumquatTree);
+  overlayDiv.appendChild(jobTree);
   overlayDiv.appendChild(popupCTA);
   overlayDiv.appendChild(buttonText);
   overlayDiv.appendChild(popupClose);
@@ -27,7 +27,7 @@ function createPopup(system) {
     overlayDiv.remove();
     chrome.storage.local.get('profile', function(result) {
       if (typeof result.profile == 'undefined') {
-        alert("You must save your Kumquat profile before autofilling.")
+        alert("You must save your Job profile before autofilling.")
       } else {
         PROFILE = JSON.parse(result.profile);
         switch(system) {
@@ -76,7 +76,7 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
     var currenturl = window.location.toString();
     chrome.storage.local.get('profile', function(result) {
       if (typeof result.profile == 'undefined') {
-        alert("You must save your Kumquat profile before autofilling.")
+        alert("You must save your Job profile before autofilling.")
       } else {
         PROFILE = JSON.parse(result.profile)
         if (existsquery("input[id='first_name']")) {
@@ -101,8 +101,8 @@ function completeNotification() {
       type: 'notification',    
       options: {      
         title: 'Autofill Complete!',     
-        message: 'Thanks for using Kumquat.',      
-        iconUrl: '/kumquat48.png',      
+        message: 'Thanks for using Job.',
+        iconUrl: '/job48.png',
         type: 'basic'    
       }  
   });

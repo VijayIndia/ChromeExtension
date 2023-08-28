@@ -46,7 +46,7 @@ function sendApplication() {
 
 
 chrome.runtime.onInstalled.addListener(function() {
-  chrome.contextMenus.create({"title": "Kumquat", "id": "parent"});
+  chrome.contextMenus.create({"title": "job", "id": "parent"});
   chrome.contextMenus.create(
       {"title": "Profile", "parentId": "parent", "id": "Profile", });
 //   chrome.contextMenus.create({"title": "Autofill", "parentId": "parent", "id": "Autofill"});

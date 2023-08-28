@@ -6,7 +6,7 @@ Written and compiled on Windows 10 Home Version 20H2 using VSCode. No external l
 Available at: https://mvnrepository.com/artifact/com.google.javascript/closure-compiler 
 
 ### Steps to build production build
-1. Download the closure-compiler jar file and place it in the same folder as all kumquat files.
+1. Download the closure-compiler jar file and place it in the same folder as all job files.
 2. Run cmd and change directory to the folder of the closure compiler jar
 3. Rename the closure compiler jar file to "compiler.jar"
 4. Run java -jar compiler.jar --js content.js main.js workday.js taleo.js greenhouse.js lever.js --js_output_file contentc.js.

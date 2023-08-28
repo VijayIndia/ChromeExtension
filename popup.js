@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function openIndex() {
-chrome.tabs.create({active: true, url: "https://chrome.google.com/webstore/detail/kumquat/mkjkimankkfhefaabddppkhbobffaadp"});
+chrome.tabs.create({active: true, url: "https://chrome.google.com/webstore/detail/job/mkjkimankkfhefaabddppkhbobffaadp"});
 }
 
 var _gaq = _gaq || [];
